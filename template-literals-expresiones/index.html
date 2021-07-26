@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templates Literals - Expresiones</title>
+  </head>
+
+  <body>
+    <script>
+      const nombre = "Misael";
+      console.log(`Mi nombre es ${nombre}`);
+      console.log(`Mi nombre es ${29}`);
+      console.log(`Este es el ${"Curso de JavaScript para React"}`);
+      console.log(`Mi nombre es ${(x = "Pablo")}`); // window.x
+      console.log(
+        `Mi apellido paterno es ${(function name() {
+          return "Peloc";
+        })()}`
+      ); // autoejecutar
+      console.log(
+        `Mi apellido materno es ${(function () {
+          return "Cisnero";
+        })()}`
+      ); // autoejecutar
+      console.log(
+        `Mi nombre es ${(() => {
+          return "Pablo Misael Arrow";
+        })()}`
+      ); // arrow function
+      console.log(`Mi nombre es ${true && "Misael Ternary"}`); // ternario
+      console.log(`Mi nombre es ${false ? "Misael true" : "Misael false"}`); // ternario
+      console.log(
+        `Mi nombre es ${["a", "b"].map((letra) => `${letra}-styled`)}`
+      );
+    </script>
+  </body>
+</html>
